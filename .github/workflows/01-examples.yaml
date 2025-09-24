@@ -1,0 +1,11 @@
+name: HelloWorld
+on: [push]  #trigger when the code get checkin
+jobs:  #one workflow contains multiple pipelines
+  hello: #this is job1
+    runs-on: ubuntu-latest  # It refers that code on which platform should execute
+    steps:  # This is similar to stages
+      - name: step1
+        run: echo "Hello World"
+      - name: step2
+        run: echo "This is Github-Actions that we are running"
+
