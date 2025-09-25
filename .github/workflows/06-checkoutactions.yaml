@@ -1,0 +1,13 @@
+name: Checkout
+on: [push]
+jobs: 
+  build: #Stages
+    runs-on: ubuntu-latest
+    steps:
+      #Checkout will happen here
+      - name: checkout
+        uses: actions/checkout@v5
+
+      - name: display the files
+        run: ls -la
+        
