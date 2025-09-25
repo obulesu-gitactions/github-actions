@@ -28,8 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print the input tag STDOUT
-      run: echo The tags are ${{ input.tags }}
+      run: echo The tags are ${{ inputs.tags }}
     - name: Print the environment
-      run: echo The tags are ${{ input.environment }}
+      run: echo The tags are ${{ inputs.environment }}
 
 
