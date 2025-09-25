@@ -1,0 +1,14 @@
+name: Conditions
+on: [push]
+jobs: #refers Workflows
+  hello: #refers pipelines
+    runs-on: ubuntu-latest
+    steps: #refers stages
+      - name: Step1
+        if: github.ref == 'refs/heads/feature-**'
+        run: echo "Hello World"
+      - name: Step2
+        if: github.ref == 'refs/heads/main'
+        run: echo "This is Github Actions main branch"
+
+
