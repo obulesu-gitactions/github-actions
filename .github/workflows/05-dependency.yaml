@@ -39,3 +39,10 @@ jobs:
     steps:
       - name: Step5
         run: echo " Hi, This is from Job-5"
+
+  job-6:
+    needs: job-5
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step6
+        run: echo "Hi, This is from Job-6"
