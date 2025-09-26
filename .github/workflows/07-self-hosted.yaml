@@ -1,0 +1,14 @@
+name: self-hosted-runner
+on:
+  push:
+    paths:
+      - '.github/workflows/07-self-hosted.yaml'
+jobs: # Refers Pipelines. One Workflows contains multiple pipelines
+  hello:
+    runs-on: self-hosted # Refers to Agent/node
+    steps: # Refers Stages
+      - name: step1
+        run: echo "Hello World"
+      - name: step2
+        run: echo "This example demonstrates for Self-hosted runner scenario"
+
