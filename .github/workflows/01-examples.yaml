@@ -1,5 +1,9 @@
 name: HelloWorld
-on: [push]  #trigger when the code get checkin
+on: # [push]  #trigger when the code get checkin
+  push:
+    paths:
+      - '.github/workflows/01-examples.yaml'
+  
 jobs:  #one workflow contains multiple pipelines
   hello: #this is job1
     runs-on: ubuntu-latest  # It refers that code on which platform should execute

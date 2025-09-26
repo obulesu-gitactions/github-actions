@@ -1,5 +1,8 @@
 name: Checkout
-on: [push]
+on: #[push]
+  push:
+    paths:
+      - '.github/workflows/06-checkoutactions.yaml'
 jobs: 
   build: #Stages
     runs-on: ubuntu-latest

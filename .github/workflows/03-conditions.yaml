@@ -1,5 +1,9 @@
 name: Conditions
-on: [push]
+on: #[push]
+  push:
+    paths:
+      - '.github/workflows/03-conditions.yaml'
+      
 jobs: #refers Workflows
   hello: #refers pipelines
     runs-on: ubuntu-latest

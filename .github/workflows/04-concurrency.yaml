@@ -1,5 +1,8 @@
 name: Concurrency
-on: [push] #triggers while pushing the code
+on: #[push] #triggers while pushing the code
+  push:
+    paths:
+      - '.github/workflows/04-concurrency.yaml'
 concurrency:
   #This workflow should be triggered for any branch only once
   group: ${{ github.workflow }}-${{ github.ref }}
