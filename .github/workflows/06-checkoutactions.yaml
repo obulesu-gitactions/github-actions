@@ -1,5 +1,5 @@
 name: Checkout
-on: #[push]
+on: [push]
 jobs: 
   build: #Stages
     runs-on: ubuntu-latest
