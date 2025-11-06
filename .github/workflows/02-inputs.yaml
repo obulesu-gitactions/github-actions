@@ -16,11 +16,11 @@ on:
         required: true
         type: boolean
       tags:
-        description: 'Test Scenario tag'
+        description: 'Test Scenario tag learnig'
         required: true
         type: string
       environment:
-        description: 'environment to run tests against'
+        description: 'environment to run tests against - Implementation Platform'
         required: true
         type: environment
 jobs:
