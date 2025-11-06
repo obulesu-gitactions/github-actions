@@ -1,12 +1,17 @@
 name: Hello World
 #When to trigger this pipeline. We can push or normal or someother events like creating PR, Updating PR, Creating branches, creating issues
-on: [push] #triggers
+#on: [push] #triggers or below is alternate method which gives more clarity on the source code path mentioning
+on:
+  push:
+    paths:
+      - '.github/workflows/01-examples.yaml'
+
 jobs: #Pipelines i.e., one workflows can have multiple pipelines
-  hello: 
-    runs-on: ubuntu-latest #it indicates destination platform to be run similar to agent in jenkins
+  hello: #Job 1
+    runs-on: ubuntu-latest # It refers that code on which platform should execute
     steps: # stages
       - name: step1
         run: echo "Hello World"
       - name: step2
-        run: echo "Hello Github Actions"
-        
+        run: echo "We are running this sample code as part of Github actions learning"
+
