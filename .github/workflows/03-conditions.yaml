@@ -8,8 +8,8 @@ jobs: # refers pipelines
     runs-on: ubuntu-latest # refers where to run
     steps: # refers stages
       - name: Step1
-        if: github.ref == 'refs/heads/feature*'
+        if: github.ref == 'refs/heads/feature-*'
         run: echo "This is Github Actions feature branch"
       - name: Step 2
-        if: github.ref == 'refs/heads/main*'
+        if: github.ref == 'refs/heads/main'
         run: echo "This is Github Actions Main branch"
