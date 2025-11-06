@@ -1,18 +1,15 @@
 name: Conditions
-on: #[push]
+on:
   push:
     paths:
       - '.github/workflows/03-conditions.yaml'
-      
-jobs: #refers Workflows
-  hello: #refers pipelines
-    runs-on: ubuntu-latest
-    steps: #refers stages
+jobs: # refers pipelines
+  hello: # refers job name
+    runs-on: ubuntu-latest # refers where to run
+    steps: # refers stages
       - name: Step1
-        if: github.ref == 'refs/heads/feature-**'
-        run: echo "Hello World"
-      - name: Step2
-        if: github.ref == 'refs/heads/main'
-        run: echo "This is Github Actions main branch"
-
-
+        if: github.ref == 'refs/heads/feature*'
+        run: echo "This is Github Actions feature branch"
+      - name: Step 2
+        if: github.ref == 'refs/heads/main*'
+        run: echo "This is Github Actions Main branch"

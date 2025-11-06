@@ -1,9 +1,9 @@
 name: Inputs
 on:
-  workflow_dispatch: #Trigger Manually
+  workflow_dispatch: #Giving Inputs at run time and Trigger manually 
     inputs:
       loglevel:
-        description: 'Log level'
+        description: 'Log Level'
         required: true
         default: 'warning'
         type: choice
@@ -16,11 +16,11 @@ on:
         required: true
         type: boolean
       tags:
-        description: 'Test Scenario tag learnig'
+        description: 'Test Scenatio tag learning'
         required: true
         type: string
-      environment:
-        description: 'environment to run tests against - Implementation Platform'
+      environment: 
+        description: 'environment to run tests against' # Implementation platform
         required: true
         type: environment
 jobs:
