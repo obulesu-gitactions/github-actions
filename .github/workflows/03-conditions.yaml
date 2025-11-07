@@ -4,7 +4,7 @@ on:
     paths:
       - '.github/workflows/03-conditions.yaml'
 jobs: # refers pipelines
-  hello: # refers job name
+  GHLearning: # refers job name
     runs-on: ubuntu-latest # refers where to run
     steps: # refers stages
       - name: Step1
