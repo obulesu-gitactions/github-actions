@@ -4,7 +4,7 @@ on:  # triggers while pushing the code
     paths:
       - '.github/workflows/04-concurrency.yaml'
 concurrency:
-# This workflow should be triggered for any branch only once
+# This workflow should be triggered for any branch only once  
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true # existing commit related pipeline will be canceled and consider latest
 jobs: # Refers Pipeline
@@ -13,3 +13,4 @@ jobs: # Refers Pipeline
     steps: # Refers Stages
       - name: Step1
         run: sleep 20
+
