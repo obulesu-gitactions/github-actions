@@ -1,16 +1,16 @@
 name: Checkout
-on: #[push]
+on:
   push:
     paths:
       - '.github/workflows/06-checkoutactions.yaml'
-jobs: 
-  build: #Stages
+jobs:
+  build: # Refers Job name
     runs-on: ubuntu-latest
-    steps:
-      #Checkout will happen here
+    steps: # Refer Stages 
+      #Checkout will happen here in first step and second step in another steps
       - name: checkout
-        uses: actions/checkout@v5
+        run: actions/checkout@v5
 
-      - name: display the files
+      - name: Display the files
         run: ls -la
         
