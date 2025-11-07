@@ -9,8 +9,7 @@ jobs:
     steps: # Refer Stages 
       #Checkout will happen here in first step and second step in another steps
       - name: checkout
-        run: actions/checkout@v5
+        uses: actions/checkout@v5
 
       - name: Display the files
         run: ls -la
-        
